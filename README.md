@@ -1,20 +1,50 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# PixelSakib
 
-# Run and deploy your AI Studio app
+High-end photo editing and retouching portfolio built with React, Vite, TypeScript, and Tailwind CSS.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/73debd9b-40f8-43c3-9bfa-f1b30046a806
+- Cinematic landing page with polished hero section
+- Interactive before/after slider
+- Brief planner and contact intake flow
+- Service, portfolio, testimonial, FAQ, and footer sections
+- Mobile-friendly layout with smooth navigation
+
+## Tech Stack
+
+- React 19
+- Vite
+- TypeScript
+- Tailwind CSS
+- Motion
+- Lucide React
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Start the development server:
    `npm run dev`
+3. Open the app in your browser at the Vite local URL shown in the terminal.
+
+## Build
+
+Create a production build with:
+
+`npm run build`
+
+## Deploy
+
+This project is ready to deploy from GitHub to Vercel.
+
+1. Push the repository to GitHub.
+2. Import the repository in Vercel.
+3. Keep the default Vite build command: `npm run build`.
+4. Use `dist` as the output directory.
+
+## Notes
+
+- The main page is optimized for quick first paint and smooth scrolling.
+- Footer navigation links jump to the main sections of the site.
