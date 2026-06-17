@@ -2217,8 +2217,8 @@ export default function App() {
       </section>
 
       {/* 10. CREATIVE AGENCY FOOTER */}
-      <footer className="bg-neutral-950 border-t border-neutral-900 py-16 text-neutral-500 text-xs font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <footer className="relative bg-neutral-950 border-t border-neutral-900 py-16 text-neutral-500 text-xs font-sans">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-5 gap-12">
           
           {/* Col 1 */}
           <div className="space-y-4">
@@ -2238,6 +2238,20 @@ export default function App() {
           {/* Col 2 */}
           <div className="space-y-3">
             <h4 className="text-white text-xs font-bold tracking-wider font-mono uppercase">
+              Navigation
+            </h4>
+            <ul className="space-y-2 text-[11px] text-neutral-400 font-sans">
+              <li><a href="#about" className="hover:text-brand-gold transition-colors">About Studio</a></li>
+              <li><a href="#portfolio" className="hover:text-brand-gold transition-colors">Gallery Portfolio</a></li>
+              <li><a href="#brief-planner" className="hover:text-brand-gold transition-colors">Brief Planner</a></li>
+              <li><a href="#services" className="hover:text-brand-gold transition-colors">Pricing</a></li>
+              <li><a href="#contact" className="hover:text-brand-gold transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Col 3 */}
+          <div className="space-y-3">
+            <h4 className="text-white text-xs font-bold tracking-wider font-mono uppercase">
               Our Foundations
             </h4>
             <ul className="space-y-2 text-[11px] text-neutral-400 font-sans">
@@ -2248,7 +2262,7 @@ export default function App() {
             </ul>
           </div>
 
-          {/* Col 3 */}
+          {/* Col 4 */}
           <div className="space-y-3">
             <h4 className="text-white text-xs font-bold tracking-wider font-mono uppercase">
               Client Protection
@@ -2261,7 +2275,7 @@ export default function App() {
             </ul>
           </div>
 
-          {/* Col 4 */}
+          {/* Col 5 */}
           <div className="space-y-3">
             <h4 className="text-white text-xs font-bold tracking-wider font-mono uppercase">
               Contact Desk
@@ -2331,6 +2345,16 @@ export default function App() {
           </div>
 
         </div>
+
+        <a
+          href="https://rhasan-dev-bd-com.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-950/90 px-4 py-2 text-[10px] font-semibold tracking-widest text-neutral-400 shadow-lg backdrop-blur-md hover:border-brand-gold/30 hover:text-brand-gold transition-colors"
+          aria-label="Made by Rakibul Hasan"
+        >
+          Made by Rakibul Hasan
+        </a>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 mt-12 border-t border-neutral-900/80 flex flex-col sm:flex-row items-center justify-between gap-6 text-[11px]">
           <p>© 2026 PixelSakib Photo Editing & Retouching Co. All rights reserved.</p>
