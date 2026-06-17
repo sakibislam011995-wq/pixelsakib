@@ -112,6 +112,9 @@ export default function BeforeAfterSlider({
           src={imageUrl}
           alt="Retouched Master After"
           className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           referrerPolicy="no-referrer"
         />
 
@@ -128,13 +131,15 @@ export default function BeforeAfterSlider({
           className="absolute inset-0 overflow-hidden pointer-events-none"
           style={{ width: `${sliderPosition}%` }}
         >
-          {/* Ensure child image has a fixed width of the parent container to keep correct scale alignment */}
-          <div className="absolute inset-0 w-full h-full" style={{ width: containerRef.current?.getBoundingClientRect().width || '100%' }}>
+          <div className="absolute inset-0 w-full h-full">
             <img
               src={imageUrl}
               alt="Raw Capture Before"
               className="absolute inset-0 w-full h-full object-cover select-none"
               style={{ filter: filterStyle }}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               referrerPolicy="no-referrer"
             />
           </div>

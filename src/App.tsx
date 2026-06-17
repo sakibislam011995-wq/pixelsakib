@@ -41,7 +41,7 @@ import {
   Palette
 } from 'lucide-react';
 
-import { SERVICES, GALLERY_ITEMS, TESTIMONIALS, FAQS, GalleryItem } from './data';
+import { SERVICES, GALLERY_ITEMS, TESTIMONIALS, FAQS, GalleryItem, STUDIO_IMAGES } from './data';
 import BeforeAfterSlider from './components/BeforeAfterSlider';
 import BriefPlanner from './components/BriefPlanner';
 import StudioStats from './components/StudioStats';
@@ -789,7 +789,7 @@ export default function App() {
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-brand-gold/10 to-transparent rounded-2xl blur-lg opacity-40 pointer-events-none" />
                 
                 <BeforeAfterSlider
-                    imageUrl="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800"
+                  imageUrl={STUDIO_IMAGES.beauty}
                   title="Interactive Highlight Showcase"
                   interactiveHint={true}
                   beforeEffects={{
@@ -1091,6 +1091,8 @@ export default function App() {
                       src={item.imageUrl}
                       alt={item.title}
                       className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                      loading={index < 2 ? 'eager' : 'lazy'}
+                      decoding="async"
                       referrerPolicy="no-referrer"
                     />
 
@@ -1696,6 +1698,8 @@ export default function App() {
                       src={serv.image}
                       alt={serv.title}
                       className="w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-300"
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent" />
@@ -1797,6 +1801,8 @@ export default function App() {
                     src={t.avatar}
                     alt={t.name}
                     className="w-10 h-10 rounded-full object-cover border border-neutral-800"
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                   <div className="flex flex-col">

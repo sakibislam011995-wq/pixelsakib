@@ -22,6 +22,12 @@ export interface GalleryItem {
   description: string;
 }
 
+export const STUDIO_IMAGES = {
+  beauty: '/assets/images/beauty_retouch_1781482107895.jpg',
+  fashion: '/assets/images/fashion_retouch_1781482141099.jpg',
+  product: '/assets/images/product_retouch_1781482123916.jpg'
+} as const;
+
 export const SERVICES = [
   {
     id: 'beauty',
@@ -36,7 +42,7 @@ export const SERVICES = [
       'Flawless stray hair removal & styling cleanups'
     ],
     priceFrom: '$18',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800'
+    image: STUDIO_IMAGES.beauty
   },
   {
     id: 'fashion',
@@ -51,7 +57,7 @@ export const SERVICES = [
       'High-contrast shade and specular highlight balancing'
     ],
     priceFrom: '$22',
-    image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=800'
+    image: STUDIO_IMAGES.fashion
   },
   {
     id: 'product',
@@ -66,7 +72,7 @@ export const SERVICES = [
       'Extreme macro depth-compositing and focus-staking prep'
     ],
     priceFrom: '$25',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800'
+    image: STUDIO_IMAGES.product
   },
   {
     id: 'mannequin',
@@ -81,7 +87,7 @@ export const SERVICES = [
       'Consistent flat-lay shadow pathways or reflection extraction'
     ],
     priceFrom: '$12',
-    image: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&q=80&w=800'
+    image: STUDIO_IMAGES.fashion
   }
 ];
 
@@ -90,7 +96,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g-beauty-1',
     title: 'Priscilla Close-up Beauty',
     category: 'Beauty',
-    imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800',
+    imageUrl: STUDIO_IMAGES.beauty,
     beforeEffects: {
       brightness: 1.05,
       contrast: 0.9,
@@ -119,7 +125,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g-product-1',
     title: 'Nectar Noir Eau de Parfum',
     category: 'Product',
-    imageUrl: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800',
+    imageUrl: STUDIO_IMAGES.product,
     beforeEffects: {
       brightness: 0.95,
       contrast: 0.85,
@@ -148,7 +154,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g-fashion-1',
     title: 'Sand Architecture Editorial',
     category: 'Fashion',
-    imageUrl: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=800',
+    imageUrl: STUDIO_IMAGES.fashion,
     beforeEffects: {
       brightness: 1.1,
       contrast: 0.88,
@@ -177,7 +183,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g-beauty-2',
     title: 'Luminous Glow Portrait',
     category: 'Beauty',
-    imageUrl: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&q=80&w=800',
+    imageUrl: STUDIO_IMAGES.beauty,
     beforeEffects: {
       brightness: 1.02,
       contrast: 0.95,
@@ -205,7 +211,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g-product-2',
     title: 'Chronoguard Chronograph',
     category: 'Product',
-    imageUrl: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800',
+    imageUrl: STUDIO_IMAGES.product,
     beforeEffects: {
       brightness: 0.9,
       contrast: 0.8,
@@ -233,7 +239,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g-fashion-2',
     title: 'Neon Urban Nocturne',
     category: 'Fashion',
-    imageUrl: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=800',
+    imageUrl: STUDIO_IMAGES.fashion,
     beforeEffects: {
       brightness: 0.95,
       contrast: 0.9,
