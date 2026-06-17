@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-gold: var(--brand-accent);
+  --color-brand-gold-dark: var(--brand-accent-dark);
+  --color-brand-gold-light: var(--brand-accent-light);
+  --color-brand-light: var(--color-neutral-100);
+
+  /* Dynamic CSS variable mappings for seamless Day/Night mode transits */
+  --color-neutral-950: var(--neutral-945);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-850: var(--neutral-850);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-50: var(--neutral-50);
+
+  --color-white: var(--color-white-theme);
+}
+
+:root {
+  --brand-accent: #00dfc4;        /* Electra-Teal / Cyber Cyan */
+  --brand-accent-dark: #00a893;   /* Rich Deep Turquoise */
+  --brand-accent-light: #64ffeb;  /* High-luminescence Mint */
+  --brand-accent-rgb: 0, 223, 196; /* RGB channels for rgba() shadows */
+
+  --neutral-945: #05070a;         /* Premium deep space carbon */
+  --neutral-900: #0a0d14;         /* Sleek, deep studio background */
+  --neutral-850: #10141e;         /* Crisp card backdrop */
+  --neutral-800: #1c2336;         /* Clean border and dividers */
+  --neutral-700: #334155; 
+  --neutral-600: #475569;
+  --neutral-500: #64748b;         /* Muted information / caption label color */
+  --neutral-400: #94a3b8;         /* High-contrast slate-silver body text */
+  --neutral-300: #cbd5e1;         /* Highly clear secondary headings */
+  --neutral-200: #e2e8f0;         /* Clear active text */
+  --neutral-100: #f1f5f9;         /* High-contrast title and graphics headers */
+  --neutral-50: #ffffff;
+  --color-white-theme: #ffffff;
+}
+
+html.light {
+  --brand-accent: #0d9488;        /* Deep, legible Teal */
+  --brand-accent-dark: #0f766e;   /* Substantial Coral Cyan */
+  --brand-accent-light: #14b8a6;  /* Soft Emerald highlight */
+  --brand-accent-rgb: 13, 148, 136; /* RGB channels for light mode */
+
+  --neutral-945: #ffffff;         /* Pristine studio white */
+  --neutral-900: #f8fafc;         /* Crisp clean secondary canvas */
+  --neutral-850: #f1f5f9;         /* Soft secondary blocks */
+  --neutral-800: #e2e8f0;         /* Delicately soft border lines */
+  --neutral-700: #64748b;         /* Balanced details */
+  --neutral-600: #475569;         /* Subtext */
+  --neutral-500: #334155;         /* Medium-contrast secondary captions */
+  --neutral-400: #1e293b;         /* Rich velvet-slate readable body text */
+  --neutral-300: #0f172a;         /* Deep headers */
+  --neutral-200: #0f172a;
+  --neutral-100: #020617;         /* Ink black */
+  --neutral-50: #000000;
+  --color-white-theme: #020617;   /* Reverse white elements to dark charcoal ink */
+}
+
+/* Custom smooth transitions & elegant slider scrollbars */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand-accent) var(--neutral-945);
+}
+
+/* Smoothly morph all typographic and layout colors during theme transitions */
+html, body, div, p, span, h1, h2, h3, h4, h5, h6, button, input, textarea, select, svg, label, a, section, nav, header, footer, aside, main, article, li, ul, ol {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.light {
+  scrollbar-color: var(--brand-accent) var(--neutral-850);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-945);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-800);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-accent);
+}
+
+/* Custom fade effects */
+.fade-mask {
+  mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+}
+
+.fade-mask-bottom {
+  mask-image: linear-gradient(to top, transparent, white 30%);
+}
+
+/* Custom scrollbar for chat/logs areas */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--neutral-945);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--brand-accent);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-accent-light);
+}
+

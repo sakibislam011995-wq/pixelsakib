@@ -1,0 +1,6 @@
+{
+  "name": "PixelSakib Photo Editing & Retouching",
+  "description": "High-end beauty, fashion, and product retouching services for professional photographers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
